@@ -2,8 +2,8 @@
   <head>
     <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!--link rel="stylesheet" type="text/css" href="assets/css/style.css"-->
-    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <div class="navbar">
@@ -12,11 +12,17 @@
       <a href="" class="navbar-item login">Login</a>
     </div>
     <div class="inputBox">
-      <input type="text" id="nameInput" placeholder="Name">
-      <input type="text" id="messageInput" placeholder="Message">
+      <input type='text' id='loginEmailInput' placeholder='Berkeley Email'>
+      <input type='text' id='loginPassInput' placeholder='Password'>
+      <button id="loginButton">Login</button>
+      <br>
+      <input type='text' id='emailInput' placeholder='Berkeley Email address'>
+      <input type='text' id='passwordInput1' placeholder='Password'>
+      <input type='text' id='passwordInput2' placeholder='Confirm Password'>
+      <button id="signUpButton">Sign Up</button>
       <script src="app.js"></script>
     </div>
-    <div class="feed">
+    <div class="feed-container">
       <div id="welcomeMsg">Hello, <!--Put username here-->!</div>
       <div id="map"></div>
       <div class="sellersList">

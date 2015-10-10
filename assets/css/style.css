@@ -38,7 +38,7 @@ a:visited {
 
 .container {
     margin: 0 auto;
-    width: 500px;
+    width: 700px;
 }
 
 .container-span {
@@ -46,7 +46,7 @@ a:visited {
 }
 
 #spacer {
-    height: 50px;
+    height: 80px;
 }
 
 .input-container {
@@ -101,6 +101,31 @@ input {
     background-color: #F2F2F2;
     border-radius: 5%;
     margin: 0 auto;
+}
+
+#map {
+    border-style: dotted;
+    border-width: 1px;
+    width: 348px;
+    height: 250px;
+    margin: 50 0 0 0;
+}
+
+.sellersList {
+    border-style: dotted;
+    border-width: 1px;
+    height: 250px;
+    width: 348px;
+    margin: 50 0 0 0;
+}
+
+#sidebyside {
+    width: 700px;
+    height: 1000px;
+}
+
+.float {
+    float: left;
 }
 
 /* .inputField {

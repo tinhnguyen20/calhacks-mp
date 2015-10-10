@@ -1,14 +1,33 @@
 <html>
   <head>
-    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!--link rel="stylesheet" type="text/css" href="assets/css/style.css"-->
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <div id='messagesDiv'>
+    <div class="navbar">
+      <a href="" class="navbar-item">Buy</a>
+      <a href="" class="navbar-item">Sell</a>
+      <a href="" class="navbar-item login">Login</a>
+    </div>
+    <div class="inputBox">
+      <input type="text" id="nameInput" placeholder="Name">
+      <input type="text" id="messageInput" placeholder="Message">
+      <script src="app.js"></script>
+    </div>
+    <div class="feed">
+      <div id="welcomeMsg">Hello, <!--Put username here-->!</div>
+      <div id="map"></div>
+      <div class="sellersList">
+        <div id="messagesDiv">
+        </div>
+      </div>
     </div>
 
-    <input type='text' id='nameInput' placeholder='Name'>
-    <input type='text' id='messageInput' placeholder='Message'>
-    <script src='app.js'></script>
+    <div id="messagesDiv">
+    </div>
+
+
   </body>
 </html>

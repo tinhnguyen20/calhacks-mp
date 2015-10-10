@@ -1,7 +1,13 @@
 var ref = new Firebase('https://blinding-inferno-7599.firebaseio.com/');
-
-
 var x = document.getElementById("demo");
+var map;
+
+function initMap(latitude, longitude) {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: latitude, lng: longitude},
+    zoom: 15
+  });
+}
 
 function getLocation() {
     if (navigator.geolocation) {
@@ -14,9 +20,7 @@ function getLocation() {
 function showPosition(position) {
     var latlon = position.coords.latitude + "," + position.coords.longitude;
 
-    var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
-    +latlon+"&zoom=16&size=400x300&sensor=false";
-    document.getElementById("map").innerHTML = "<img src='"+img_url+"'>";
+    initMap(position.coords.latitude, position.coords.longitude);
 }
 
 function showError(error) {

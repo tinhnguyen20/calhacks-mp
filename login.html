@@ -8,9 +8,14 @@
   </head>
   <body>
     <div class="navbar">
-      <a href="index.html" class="navbar-item">Buy</a>
-      <a href="index.html" class="navbar-item">Sell</a>
+      <a href="index.html" class="navbar-item">Home</a>
+      <a href="index.html" class="navbar-item">Post</a>
+      <div id="userInput">
+        <a href="./login.html" class="navbar-item button-link">Login</a>
+        <a href="./signup.html" class="navbar-item button-link">Sign Up</a>
+      </div>
     </div>
+
     <div class="container">
       <div class="container-span">
         <div class="input-container">
@@ -19,10 +24,11 @@
             <input type='text' id='loginEmailInput' placeholder='Berkeley Email'>
           </div>
           <div class="inputField">
-            <input type='text' id='loginPassInput' placeholder='Password'>
+            <input type='password' id='loginPassInput' placeholder='Password'>
           </div>
           <div class="inputField">
             <button id="loginButton" class="largeButton">Login</button>
+            <button id="facebookLogin" class="largeButton">Login with Facebook</button>
           </div>
           <br>
           <script src="app.js"></script>

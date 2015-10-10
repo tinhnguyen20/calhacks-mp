@@ -1,16 +1,22 @@
-.navbar {
+body {
     font-family: 'Open Sans', sans-serif;
-    height: 40px;
+}
+
+.navbar {
+    height: 45px;
     width: 100%;
     margin: 0 auto;
     position: absolute;
     left: 0px;
     right: 0px;
     top: 0px;
-    line-height: 40px;
+    line-height: 45px;
     background-color: #47A3FF;
     color: #FCFCFC;
+}
 
+.navbar-item {
+    padding: 5 15 5 15;
 }
 
 a {
@@ -24,3 +30,50 @@ a:link {
 a:visited {
     text-decoration: none;
 }
+
+.feed-container {
+    position: relative;
+}
+
+.container {
+    margin: 0 auto;
+    width: 500px;
+}
+
+#spacer {
+    height: 50px;
+}
+
+.inputBox {
+    float: right;
+}
+
+#userInput {
+    height: inherit;
+    float: right;
+}
+
+#welcomeMsg {
+    font-family: 'Droid Sans', sans-serif;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.button {
+    background-color: #F2F2F2;
+    color: black;
+    border-radius: 5%;
+    margin: 5px;
+    padding: 2 7;
+}
+
+
+
+
+
+
+
+
+
+

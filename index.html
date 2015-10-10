@@ -4,36 +4,39 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <div class="navbar">
       <a href="" class="navbar-item">Buy</a>
       <a href="" class="navbar-item">Sell</a>
-      <a href="" class="navbar-item login">Login</a>
+      <div id="userInput">
+        <a href="" class="navbar-item button">Login</a>
+        <a href="" class="navbar-item button">Sign Up</a>
+      </div>
+      <!--<div class="inputBox">
+        <input type='text' id='loginEmailInput' placeholder='Berkeley Email'>
+        <input type='text' id='loginPassInput' placeholder='Password'>
+        <button id="loginButton">Login</button>
+        <br>
+        <input type='text' id='emailInput' placeholder='Berkeley Email address'>
+        <input type='text' id='passwordInput1' placeholder='Password'>
+        <input type='text' id='passwordInput2' placeholder='Confirm Password'>
+        <button id="signUpButton">Sign Up</button>
+        <script src="app.js"></script>
+      </div>-->
     </div>
-    <div class="inputBox">
-      <input type='text' id='loginEmailInput' placeholder='Berkeley Email'>
-      <input type='text' id='loginPassInput' placeholder='Password'>
-      <button id="loginButton">Login</button>
-      <br>
-      <input type='text' id='emailInput' placeholder='Berkeley Email address'>
-      <input type='text' id='passwordInput1' placeholder='Password'>
-      <input type='text' id='passwordInput2' placeholder='Confirm Password'>
-      <button id="signUpButton">Sign Up</button>
-      <script src="app.js"></script>
-    </div>
-    <div class="feed-container">
-      <div id="welcomeMsg">Hello, <!--Put username here-->!</div>
-      <div id="map"></div>
-      <div class="sellersList">
-        <div id="messagesDiv">
+    <div id="spacer"></div>
+    <div class="container">
+      <div class="feed-container">
+        <div id="welcomeMsg">Hello, <!--Put username here-->!</div>
+        <div id="map"></div>
+        <div class="sellersList">
+          <div id="messagesDiv">
+          </div>
         </div>
       </div>
     </div>
-
-    <div id="messagesDiv">
-    </div>
-
 
   </body>
 </html>

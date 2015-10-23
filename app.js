@@ -1,7 +1,15 @@
 var ref = new Firebase('https://blinding-inferno-7599.firebaseio.com/');
-
-
 var x = document.getElementById("demo");
+var map;
+
+function initMap(latitude, longitude) {
+  var coords = new google.maps.LatLng(latitude, longitude);
+
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: coords,
+    zoom: 15
+  });
+}
 
 function getLocation() {
   if (navigator.geolocation) {
@@ -13,10 +21,7 @@ function getLocation() {
 
 function showPosition(position) {
   var latlon = position.coords.latitude + "," + position.coords.longitude;
-
-  var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
-  +latlon+"&zoom=16&size=400x300&sensor=false";
-  document.getElementById("map").innerHTML = "<img src='"+img_url+"'>";
+    initMap(position.coords.latitude, position.coords.longitude);
 }
 
 function showError(error) {
@@ -47,8 +52,11 @@ $('#loginButton').click(function () {
   ref.authWithPassword({
     email   : email,
     password: password
-  }, authHandler);
+  }, authHandler, {
+    remember:"sessionOnly"
+  });
   $('#loginPassInput').val('');
+  
 });
 
 /* Creates a new user given 
@@ -68,12 +76,25 @@ $('#signUpButton').click(function() {
         console.log("Error creating user:", error);
       } else {
         console.log("Successfully created user account with uid:", userData.uid);
+        $('#welcomeMsg').html(ref.getAuth().name);
       }
     });
   }
   $('#passwordInput1').val('');
   $('#passwordInput2').val('');
 });
+
+$('#facebookLogin').click(function() {
+  console.log("clicked");
+  ref.authWithOAuthPopup("facebook", function(error, authData) {
+    if (error) {
+      console.log("Login Failed!", error);
+    } else {
+      console.log("Authenticated successfully with payload:", authData);
+    }
+  });
+});
+
 /*
 myDataRef.on('child_added', function(snapshot) {
   var message = snapshot.val();
@@ -93,3 +114,4 @@ function authHandler(error, authData) {
     console.log("Authenticated successfully with payload:", authData);
   }
 }
+

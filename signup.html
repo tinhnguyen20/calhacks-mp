@@ -7,22 +7,33 @@
     <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <div class="navbar"></div>
+    <div class="navbar">
+      <a href="index.html" class="navbar-item">Home</a>
+      <a href="index.html" class="navbar-item">Post</a>
+      <div id="userInput">
+        <a href="./login.html" class="navbar-item button-link">Login</a>
+        <a href="./signup.html" class="navbar-item button-link">Sign Up</a>
+      </div>
+    </div>
+
     <div class="container">
       <div class="container-span">
         <div class="input-container">
           <div id="login-msg">Sign Up and Get Started</div>
           <div class="inputField">
+            <input type='text' id='nameInput' placeholder='Your Name'>
+          </div>
+          <div class="inputField">
             <input type='text' id='emailInput' placeholder='Berkeley Email address'>
           </div>
           <div class="inputField">
-            <input type='text' id='passwordInput1' placeholder='Password'>
+            <input type='password' id='passwordInput1' placeholder='Password'>
           </div>
           <div class="inputField">
-            <input type='text' id='passwordInput2' placeholder='Confirm Password'>
+            <input type='password' id='passwordInput2' placeholder='Confirm Password'>
           </div>
           <div class="inputField">
-            <div id="signUpButton" class="largeButton">Sign Up</div>
+            <button id="signUpButton" class="largeButton">Sign Up</button>
           </div>
           <br>
           <script src="app.js"></script>
